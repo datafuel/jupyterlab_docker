@@ -10,3 +10,9 @@ services:
             - ./notebooks:/home/notebooks
         ports:
             - 8888:8888
+
+networks: 
+    default: 
+        external: 
+            name: datafuel-local-network
+     
