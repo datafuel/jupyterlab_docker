@@ -3,7 +3,6 @@ FROM ubuntu:latest
 # No input in the prompt
 ENV DEBIAN_FRONTEND noninteractive
 
-
 RUN apt-get -y update && apt-get -y upgrade
 
 # Install python dependencies
@@ -26,7 +25,7 @@ RUN cd "$(dirname $(which python3))" \
 #   apt-get install -y nodejs texlive-latex-extra texlive-xetex && \
 #   rm -rf /var/lib/apt/lists/* && \
 #   node -v
-RUN apt install -y nodejs npm
+# RUN apt install -y nodejs npm
 
 WORKDIR /home
 
@@ -34,7 +33,7 @@ COPY requirements.txt .
 
 RUN pip install -r requirements.txt
 
-RUN jupyter labextension install @jupyterlab/toc \
-    && jupyter lab build
+# RUN jupyter labextension install @jupyterlab/toc \
+#     && jupyter lab build
 
 EXPOSE 8888

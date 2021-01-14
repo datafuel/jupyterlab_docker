@@ -3,3 +3,4 @@ requests
 Scrapy
 jupyterlab
 ipydeps
+xeus-python
