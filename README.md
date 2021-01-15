@@ -14,7 +14,9 @@ Make sure to wait at least 30 seconds before launching any service !
 ## Access Jupyterlab service
   - Jupyterlab : http://localhost:8888
 
-
+## Tips
+  - run notebooks from CLI with `jupyter nbconvert --to notebook --execute mynotebook.ipynb`
+  
 # Development
 1. After making your changes, run `docker-compose build -f dev-docker-compose.yml`
 

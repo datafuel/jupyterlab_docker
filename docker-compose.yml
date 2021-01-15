@@ -2,6 +2,7 @@ version: '3'
 
 services: 
     jupyterlab:
+        container_name: jupyterlab
         image: datafuel/jupyterlab
         environment:
             - TOKEN=$TOKEN
@@ -10,3 +11,8 @@ services:
             - ./notebooks:/home/notebooks
         ports:
             - 8888:8888
+    selenium:
+        container_name: selenium
+        image: selenium/standalone-chrome
+        ports:
+            - 4444:4444
