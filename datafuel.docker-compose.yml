@@ -5,6 +5,7 @@ services:
         image: datafuel/jupyterlab
         environment:
             - TOKEN=$TOKEN
+        working_dir: /home/notebooks
         command: "jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --NotebookApp.token=$TOKEN"
         volumes: 
             - ./notebooks:/home/notebooks
