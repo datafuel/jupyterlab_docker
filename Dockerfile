@@ -12,13 +12,20 @@ RUN apt-get install -y \
     libffi-dev \ 
     python3-dev \
     python3-pip \
-    curl
+    curl \
+    unixodbc-dev \
+    alien
 
 # Change Aliases
 RUN cd "$(dirname $(which python3))" \
     && ln -s python3 python \
     && ln -s pip3 pip
 
+WORKDIR /drivers
+COPY ./drivers .
+RUN alien --to-deb dremio-odbc-1.5.1.1001-1.x86_64.rpm \
+  && dpkg -i dremio-odbc_1.5.1.1001-2_amd64.deb
+ENV PATH ${PATH}:/drivers
 # Install nodejs
 # RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
 #   apt-get upgrade -y && \
