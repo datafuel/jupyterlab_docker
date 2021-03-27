@@ -12,7 +12,8 @@ RUN apt-get install -y \
     libffi-dev \ 
     python3-dev \
     python3-pip \
-    curl
+    curl \
+    gcc
 
 # Change Aliases
 RUN cd "$(dirname $(which python3))" \
