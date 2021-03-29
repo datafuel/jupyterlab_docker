@@ -21,4 +21,4 @@ Make sure to wait at least 30 seconds before launching any service !
 
 
 # Commande pour executer un notebook rapidement terminal jupyterlab
-`docker exec jupyterlab bash /scripts/run_notebook.sh /home/notebooks/Data_SIMA/IMMATS.ipynb` 
+`docker exec jupyterlab bash /scripts/run_notebook.sh /home/notebooks/Data_SIMA/Toutes_IMMATS.ipynb` 
