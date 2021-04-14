@@ -4,3 +4,7 @@ Scrapy
 jupyterlab
 ipydeps
 xeus-python
+xlrd
+openpyxl
+SQLAlchemy
+psycopg2-binary

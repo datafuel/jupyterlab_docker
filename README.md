@@ -16,6 +16,15 @@ Make sure to wait at least 30 seconds before launching any service !
 
 
 # Development
-1. After making your changes, run `docker-compose build -f dev-docker-compose.yml`
+1. After making your changes, run `docker-compose -f dev-docker-compose.yml build`
 
-*(N.B. : the build process may be long, due to the build of jupyterlab after installing extensions)*
+
+
+# Commande pour executer un notebook rapidement terminal jupyterlab
+`docker exec jupyterlab bash /scripts/run_notebook.sh /home/notebooks/Data_SIMA/P.O.C/immats_03_21.ipynb`
+
+`docker exec jupyterlab bash /scripts/run_notebook.sh /home/notebooks/Data_SIMA/P.O.C/immats_2018.ipynb`
+
+`docker exec jupyterlab bash /scripts/run_notebook.sh /home/notebooks/Data_SIMA/P.O.C/immats_2019.ipynb`
+
+`docker exec jupyterlab bash /scripts/run_notebook.sh /home/notebooks/Data_SIMA/P.O.C/immats_2020.ipynb`
